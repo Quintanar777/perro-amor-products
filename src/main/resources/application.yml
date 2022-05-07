@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: perroAmorProducts
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/perroamor_products_db
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: perro4mor
+    password: 'perroP4ass'
+    schema-generate: CREATE_DROP
+    dialect: MYSQL
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        show_sql: true
+
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/liquibase-changelog.yaml'
