@@ -14,8 +14,14 @@ public class Price {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPrice;
 
+    @Column(name = "short_name")
+    private String shortName;
+
     @Column(name = "regular")
     private String regular;
+
+    @Column(name = "offer")
+    private String offer;
 
     @Column(name = "wholesale")
     private String wholesale;

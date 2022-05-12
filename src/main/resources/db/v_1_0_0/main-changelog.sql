@@ -33,6 +33,7 @@ CREATE TABLE `group`(
 --changeset quintanar:CREATE_TABLE_sub_type
 CREATE TABLE price(
     id_price INT AUTO_INCREMENT PRIMARY KEY,
+    short_name VARCHAR(50) NOT NULL,
     regular VARCHAR(10) NOT NULL,
     offer VARCHAR(10) NOT NULL,
     wholesale VARCHAR(10),
@@ -96,9 +97,9 @@ INSERT INTO sub_type(sub_type) VALUES ("Extención");
 
 
 --changeset quintanar:INSERT_CAT_price
-INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("219.00", "200.00", "200.00", "200.00");
-INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("249.00", "200.00", "200.00", "200.00");
-INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("209.00", "200.00", "200.00", "200.00");
-INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("149.00", "200.00", "200.00", "200.00");
-INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("199.00", "200.00", "200.00", "200.00");
-INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("169.00", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, short_name, offer, wholesale, half_wholesale) VALUES ("219.00", "alebrije", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, short_name, offer, wholesale, half_wholesale) VALUES ("249.00", "deja vu", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, short_name, offer, wholesale, half_wholesale) VALUES ("209.00", "lacito", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, short_name, offer, wholesale, half_wholesale) VALUES ("149.00", "vida mia", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, short_name, offer, wholesale, half_wholesale) VALUES ("199.00", "brillo mio", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, short_name, offer, wholesale, half_wholesale) VALUES ("169.00", "vanny", "200.00", "200.00", "200.00");
