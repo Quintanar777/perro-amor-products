@@ -76,6 +76,15 @@ INSERT INTO perroamor_products_db.`size`
 VALUES('XL', 'Extra Grande');
 
 
+--changeset quintanar:INSERT_CAT_type
+INSERT INTO type(type) VALUES ("Collar");
+INSERT INTO type(type) VALUES ("Correa");
+INSERT INTO type(type) VALUES ("Pechera");
+INSERT INTO type(type) VALUES ("Combo");
+INSERT INTO type(type) VALUES ("Kits");
+INSERT INTO type(type) VALUES ("Accesorios");
+
+
 --changeset quintanar:INSERT_CAT_sub_type
 INSERT INTO sub_type(sub_type) VALUES ("Pechera + Correa");
 INSERT INTO sub_type(sub_type) VALUES ("Collar + Correa");
