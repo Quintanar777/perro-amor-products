@@ -3,7 +3,8 @@
 --changeset quintanar:CREATE_TABLE_size
 CREATE TABLE `size`(
     id_size INT AUTO_INCREMENT PRIMARY KEY,
-    ´size´ VARCHAR(5) NOT NULL
+    code VARCHAR(5) NOT NULL,
+    `´size´` VARCHAR(50) NOT NULL
 );
 
 
@@ -32,9 +33,10 @@ CREATE TABLE `group`(
 --changeset quintanar:CREATE_TABLE_sub_type
 CREATE TABLE price(
     id_price INT AUTO_INCREMENT PRIMARY KEY,
-    regular VARCHAR(5) NOT NULL,
-    wholesale VARCHAR(5),
-    half_wholesale VARCHAR(5)
+    regular VARCHAR(10) NOT NULL,
+    offer VARCHAR(10) NOT NULL,
+    wholesale VARCHAR(10),
+    half_wholesale VARCHAR(10)
 );
 
 --changeset quintanar:CREATE_TABLE_product
@@ -54,3 +56,40 @@ CREATE TABLE product(
     FOREIGN KEY (id_price) REFERENCES price(id_price),
     FOREIGN KEY (id_group) REFERENCES `group`(id_group)
 );
+
+
+--changeset quintanar:INSERT_CAT
+INSERT INTO perroamor_products_db.`size`
+(code, `´size´`)
+VALUES('XS', 'Extra Chica');
+INSERT INTO perroamor_products_db.`size`
+(code, `´size´`)
+VALUES('S', 'Chica');
+INSERT INTO perroamor_products_db.`size`
+(code, `´size´`)
+VALUES('M', 'Mediana');
+INSERT INTO perroamor_products_db.`size`
+(code, `´size´`)
+VALUES('L', 'Grande');
+INSERT INTO perroamor_products_db.`size`
+(code, `´size´`)
+VALUES('XL', 'Extra Grande');
+
+
+--changeset quintanar:INSERT_CAT_sub_type
+INSERT INTO sub_type(sub_type) VALUES ("Pechera + Correa");
+INSERT INTO sub_type(sub_type) VALUES ("Collar + Correa");
+INSERT INTO sub_type(sub_type) VALUES ("Kit Todo Mio");
+INSERT INTO sub_type(sub_type) VALUES ("Kit Quiero Todo");
+INSERT INTO sub_type(sub_type) VALUES ("Bolsitas");
+INSERT INTO sub_type(sub_type) VALUES ("Mochila");
+INSERT INTO sub_type(sub_type) VALUES ("Extención");
+
+
+--changeset quintanar:INSERT_CAT_price
+INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("219.00", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("249.00", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("209.00", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("149.00", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("199.00", "200.00", "200.00", "200.00");
+INSERT INTO price (regular, offer, wholesale, half_wholesale) VALUES ("169.00", "200.00", "200.00", "200.00");

@@ -14,6 +14,9 @@ public class Size {
     @Column(name = "id_size")
     private Long idSize;
 
-    @Column(name = "size")
+    @Column(name = "code")
+    private String code;
+
+    @Column(name = "`´size´`")
     private String size;
 }

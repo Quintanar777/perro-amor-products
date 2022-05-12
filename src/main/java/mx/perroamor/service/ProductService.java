@@ -2,6 +2,7 @@ package mx.perroamor.service;
 
 import jakarta.inject.Singleton;
 import lombok.AllArgsConstructor;
+import mx.perroamor.dto.ProductDTO;
 import mx.perroamor.model.entity.Product;
 import mx.perroamor.model.repository.ProductRepository;
 
@@ -21,5 +22,13 @@ public class ProductService {
     public List<Product> getAllProducts() {
         return StreamSupport.stream(this.productRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * Add product
+     */
+    public Product addProduct(final ProductDTO productDTO) {
+
+        return null;
     }
 }
