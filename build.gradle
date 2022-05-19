@@ -14,6 +14,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut:micronaut-runtime")
@@ -21,6 +22,7 @@ dependencies {
     implementation("io.micronaut.liquibase:micronaut-liquibase")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("jakarta.annotation:jakarta.annotation-api")
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("mysql:mysql-connector-java")
@@ -30,6 +32,8 @@ dependencies {
     implementation("io.micronaut:micronaut-validation")
 
     testImplementation("org.mockito:mockito-core")
+
+    implementation group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
 
 }
 

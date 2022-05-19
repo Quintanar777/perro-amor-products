@@ -19,4 +19,8 @@ public class PriceService {
         return StreamSupport.stream(this.priceRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
     }
+
+    public Price addPrice(Price price) {
+        return this.priceRepository.save(price);
+    }
 }

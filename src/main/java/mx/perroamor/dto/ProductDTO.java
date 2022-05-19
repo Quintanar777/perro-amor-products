@@ -1,18 +1,17 @@
 package mx.perroamor.dto;
 
+import io.micronaut.core.annotation.Introspected;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Data
+@Introspected
 public class ProductDTO {
 
     @NotBlank
     private String name;
-
-    @NotBlank
-    private String code;
 
     @NotBlank
     private String description;

@@ -1,4 +1,10 @@
 micronaut:
+  server:
+    cors:
+      enabled: true
+      configurations:
+        all:
+          ...
   application:
     name: perroAmorProducts
 datasources:
